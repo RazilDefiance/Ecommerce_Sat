@@ -5,3 +5,8 @@ DataBase Connection
 Packets
 Microsoft.EntityFrameworkCore.SqlServer
 Microsoft.EntityFrameworkCore.Tools
+
+
+Cmdlets Nuget
+add-migration name
+update-database
