@@ -1,0 +1,7 @@
+DataBase Connection
+
+"ConnectionStrings": {"DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=ECommerce;Trusted_Connection=True;MultipleActiveResultSets=true" } 
+
+Packets
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
