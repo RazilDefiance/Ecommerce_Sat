@@ -5,6 +5,7 @@ namespace ECommerce_Project.DAL.Entities
 {
     public class Entity
     {
+        [Key]
         public virtual Guid Id { get; set; }
 
         [Display(Name = "Fecha Creación")]
