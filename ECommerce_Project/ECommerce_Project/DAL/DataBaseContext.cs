@@ -11,12 +11,14 @@ namespace ECommerce_Project.DAL
 
         // Mapeando identidad
         public DbSet<Country> Countries { get; set; } // Creación de tablas
+        public DbSet<Country> Categories { get; set; } // Creación de tablas
 
-        // Creación indice para Td Conectext
+        // Creación indice para las tablas
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Country>().HasIndex(c => c.Name).IsUnique();
+            modelBuilder.Entity<Category>().HasIndex(c => c.Name).IsUnique();
         }
 
     }
