@@ -1,0 +1,15 @@
+﻿@model ECommerce_Project.DAL.Entities.Category
+
+@{
+    ViewData["Title"] = "Category";
+}
+
+<h1>Categorías</h1>
+
+<div>
+    <partial name="../Shared/PartialViews/_CategoryDetailsDelete" />
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-outline-warning">Editar</a>
+    <a asp-action="Index" class="btn btn-outline-success">Regresar</a>
+</div>

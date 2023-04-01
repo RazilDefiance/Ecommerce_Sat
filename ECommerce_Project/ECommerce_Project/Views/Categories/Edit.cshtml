@@ -1,4 +1,4 @@
-﻿@model ECommerce_Project.DAL.Entities.Country
+﻿@model ECommerce_Project.DAL.Entities.Category
 
 @{
     ViewData["Title"] = "Edit";
@@ -13,7 +13,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="CreateDate" />
-            <partial name="../Shared/PartialViews/_CountryCreateEdit" />
+            <partial name="../Shared/PartialViews/_CategoryCreateEdit" />
             <div class="form-group">
                 <input type="submit" value="Guardar" class="btn btn-primary" />
                 <a asp-action="Index" class="btn btn-outline-success">Regresar</a>
@@ -23,5 +23,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

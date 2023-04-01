@@ -62,6 +62,7 @@ namespace ECommerce_Project.Controllers
             {
                 try
                 {
+                    country.CreateDate = DateTime.Now;
                     _context.Add(country);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
@@ -118,6 +119,7 @@ namespace ECommerce_Project.Controllers
             {
                 try
                 {
+                    country.ModifiedDate = DateTime.Now;
                     _context.Update(country);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));

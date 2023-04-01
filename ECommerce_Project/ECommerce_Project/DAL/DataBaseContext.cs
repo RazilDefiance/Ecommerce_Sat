@@ -11,7 +11,7 @@ namespace ECommerce_Project.DAL
 
         // Mapeando identidad
         public DbSet<Country> Countries { get; set; } // Creación de tablas
-        public DbSet<Country> Categories { get; set; } // Creación de tablas
+        public DbSet<Category> Categories { get; set; } // Creación de tablas
 
         // Creación indice para las tablas
         protected override void OnModelCreating(ModelBuilder modelBuilder)

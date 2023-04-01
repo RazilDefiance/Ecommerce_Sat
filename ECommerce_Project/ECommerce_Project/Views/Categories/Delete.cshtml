@@ -1,0 +1,18 @@
+﻿@model ECommerce_Project.DAL.Entities.Category
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Eliminar</h1>
+
+<h3>¿Estas seguro que deseas eliminar ésta categoría?</h3>
+<div>
+    <partial name="../Shared/PartialViews/_CategoryDetailsDelete" />
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="CreateDate" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-outline-success">Regresar</a>
+    </form>
+</div>

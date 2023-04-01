@@ -10,6 +10,7 @@ namespace ECommerce_Project.DAL.Entities
         [Required(ErrorMessage ="El campo {0} es obligatorio")]
         public string Name  { get; set; }
 
+        [Display(Name = "Descripción")]
         public string? Description { get; set; }
     }
 }
