@@ -4,7 +4,11 @@ DataBase Context
 
 || ----------------------------------------------------------------------------------------------
 Program.cs
-builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation(); // Paste later of DataBaseContext
+
+|| ----------------------------------------------------------------------------------------------
+Partial Viewa
+<partial name="../Shared/PartialViews/_CountryCreateEdit" />
 
 || ----------------------------------------------------------------------------------------------
 DataTables StyleSheet
@@ -59,7 +63,7 @@ URL INFO: https://cdn.datatables.net/
 Packets
 Microsoft.EntityFrameworkCore.SqlServer
 Microsoft.EntityFrameworkCore.Tools
-Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
+Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation (Auto Update Browser)
 
 || ----------------------------------------------------------------------------------------------
 Cmdlets Nuget
