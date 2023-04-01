@@ -12,6 +12,7 @@ namespace ECommerce_Project.DAL
         // Mapeando identidad
         public DbSet<Country> Countries { get; set; } // Creación de tablas
         public DbSet<Category> Categories { get; set; } // Creación de tablas
+        public DbSet<State> States{ get; set; } // Creación de tablas
 
         // Creación indice para las tablas
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -19,6 +20,7 @@ namespace ECommerce_Project.DAL
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Country>().HasIndex(c => c.Name).IsUnique();
             modelBuilder.Entity<Category>().HasIndex(c => c.Name).IsUnique();
+            modelBuilder.Entity<State>().HasIndex("Name","CountryId").IsUnique();
         }
 
     }
