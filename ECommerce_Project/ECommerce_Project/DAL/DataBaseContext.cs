@@ -1,18 +1,20 @@
 ﻿using ECommerce_Project.DAL.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ECommerce_Project.DAL
 {
-    public class DataBaseContext : DbContext
+    public class DataBaseContext : IdentityDbContext<User>
     {
         public DataBaseContext(DbContextOptions<DataBaseContext> options) : base(options)
         {
         }
 
         // Mapeando identidad
-        public DbSet<Country> Countries { get; set; } // Creación de tablas
-        public DbSet<Category> Categories { get; set; } // Creación de tablas
-        public DbSet<State> States{ get; set; } // Creación de tablas
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Category> Categories { get; set; } 
+        public DbSet<State> States{ get; set; } 
+        public DbSet<City> Cities { get; set; }
 
         // Creación indice para las tablas
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -21,6 +23,7 @@ namespace ECommerce_Project.DAL
             modelBuilder.Entity<Country>().HasIndex(c => c.Name).IsUnique();
             modelBuilder.Entity<Category>().HasIndex(c => c.Name).IsUnique();
             modelBuilder.Entity<State>().HasIndex("Name","CountryId").IsUnique();
+            modelBuilder.Entity<City>().HasIndex("Name", "StateId").IsUnique();
         }
 
     }

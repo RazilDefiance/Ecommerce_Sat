@@ -12,5 +12,12 @@ namespace ECommerce_Project.DAL.Entities
 
         public Country Country { get; set; }
 
+        [Display(Name = "Ciudades")] //Nombre que quiero mostrar en la web
+        public ICollection<City> Cities { get; set; }
+
+        //Propiedad de lectura...
+        [Display(Name = "Número Ciudades")] //Nombre que quiero mostrar en la web
+        public int CitiesNumber => Cities == null ? 0 : Cities.Count;
+
     }
 }
