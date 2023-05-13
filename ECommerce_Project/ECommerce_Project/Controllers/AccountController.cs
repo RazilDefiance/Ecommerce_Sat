@@ -15,13 +15,13 @@ namespace ECommerce_Project.Controllers
         //private readonly IDropDownListHelper _ddlHelper;
         //private readonly IAzureBlobHelper _azureBlobHelper;
 
-        //public AccountController(IUserHelper userHelper, DataBaseContext context, IDropDownListHelper dropDownListHelper, IAzureBlobHelper azureBlobHelper)
-        //{
-        //    _userHelper = userHelper;
-        //    _context = context;
-        //    _ddlHelper = dropDownListHelper;
-        //    _azureBlobHelper = azureBlobHelper;
-        //}
+        public AccountController(IUserHelper userHelper, DataBaseContext context/* IDropDownListHelper dropDownListHelper, IAzureBlobHelper azureBlobHelper*/)
+        {
+            _userHelper = userHelper;
+            _context = context;
+            //_ddlHelper = dropDownListHelper;
+            //_azureBlobHelper = azureBlobHelper;
+        }
 
         [HttpGet]
         public IActionResult Login()
@@ -56,10 +56,10 @@ namespace ECommerce_Project.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        //public IActionResult Unauthorized()
-        //{
-        //    return View();
-        //}
+        public IActionResult Unauthorized()
+        {
+            return View();
+        }
 
         //[HttpGet]
         //public async Task<IActionResult> Register()
